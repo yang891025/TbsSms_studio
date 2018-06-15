@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.tbs.tbssms"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:versionCode="111"
+          android:versionName="1.1.1">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18"/>
+
+    <application
+        android:name="com.tbs.tbssms.common.BaseApplication"
+        android:allowBackup="true"
+        android:persistent="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Black.NoTitleBar">
+        <activity
+            android:name=".activity.LaunchActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LauncherActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.MainTab"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.MainSms"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.MainAddress"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.MainSetting"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.MoreSetting"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.OASetting"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.EmailSetting"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.SmsServerSetting"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.MoreServerSetting"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.SmsGatewatSetting"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.SmsForwardSetting"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.Address"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.AddressDetail"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.AddAddress"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.UpdateAddress"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.ChatMsg"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.Exit"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/MyDialogStyle">
+        </activity>
+        <activity
+            android:name=".activity.SmsForwardActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/MyDialogStyle">
+        </activity>
+
+        <activity
+            android:name=".activity.AboutApp"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name="org.achartengine.GraphicalActivity"/>
+        <activity
+            android:name=".activity.TelephoneNumberSetting"
+            android:screenOrientation="sensorPortrait"/>
+        <activity
+            android:name=".activity.DetailServerSetting"
+            android:screenOrientation="sensorPortrait"/>
+
+        <receiver android:name=".receiver.SMSReceiver" android:exported="true">
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.tbs.tbssms.receiver.AppReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="exit_activity"/>
+                <action android:name="http_start_service"/>
+                <action android:name="http_close_service"/>
+                <action android:name="mis_start_service"/>
+                <action android:name="mis_close_service"/>
+                <action android:name="dbk_start_service"/>
+                <action android:name="dbk_close_service"/>
+                <action android:name="start_timer"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".server.HttpServer"/>
+
+        <service
+            android:name=".server.SocketServer"
+            android:enabled="true"
+            android:label="SmsReceiveService">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="com.tbs.tbssms.SmsService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".server.SocketServer$GrayInnerService"/>
+        <!--<receiver android:name=".receiver.SmsServiceReceiver" android:process=":SmsService"/>-->
+        <!--<service android:name=".server.SmsAsideService" android:process=":SmsAside"/>-->
+        <!--<receiver android:name=".receiver.SmsAsideReceiver" android:process=":SmsAside"/>-->
+        <!-- 推送的功能 -->
+        <!--
+        <activity
+            android:name=".client.NotificationDetailsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="通知查询"
+            android:screenOrientation="sensor"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name=".client.NotificationSettingsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="通知设置"
+            android:screenOrientation="sensor"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+
+        <service
+            android:name=".client.NotificationService"
+            android:enabled="true"
+            android:label="NotificationService" >
+            <intent-filter>
+                <action android:name="org.androidpn.client.NotificationService" />
+            </intent-filter>
+        </service>
+        
+        <receiver android:name=".receiver.launchPhone" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        -->
+    </application>
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 阅读内容 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <!-- 写入内容 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 发送消息 -->
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <!-- 阅读消息 -->
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <!-- 写入消息 -->
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <!-- 接收消息 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 保持唤醒状态 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!-- 程序退出 -->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+</manifest>

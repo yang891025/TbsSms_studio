@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="#fcfcfc" android:orientation="vertical" >
+    <RelativeLayout android:id="@+id/title" android:layout_width="fill_parent" android:layout_height="45dp" android:background="@drawable/title_bar" android:gravity="center_vertical" >
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:text="@string/main_title" android:textColor="#ffffff" android:textSize="20sp" />
+        <ImageButton android:id="@+id/right_btn" android:layout_width="67dp" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginRight="5dp" android:background="@drawable/title_btn_right" android:src="@drawable/mm_title_btn_compose_normal" />
+    </RelativeLayout>
+    <include layout="@layout/contact_search_bar"/>
+    <TextView android:id="@id/textview" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/listview_contact_null" android:gravity="center_horizontal" android:textColor="@android:color/black" android:textSize="15.0sp" android:background="@color/bg_gray" android:paddingTop="20.0dip" android:visibility="gone"/>
+    <ListView android:id="@id/listview" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/bg_gray" android:cacheColorHint="#00000000" android:divider="@null" android:fastScrollEnabled="true" android:focusable="false" />
+</LinearLayout>

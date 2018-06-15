@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@id/backBtn"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/title_btn_back"
+            android:onClick="btnmainright"
+            android:text="@string/back_btn"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/login_msg"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/addbtn"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:background="@drawable/title_btn_right"
+            android:text="@string/save_btn"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbarStyle="outsideOverlay" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- ******************************************************************** -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14.0dip"
+                android:background="@drawable/preference_single_item"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/auto_start_server"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@id/toggleButton"
+                    style="@style/mycheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/login_setting"
+                    android:layout_marginLeft="18.0dip"
+                    android:text="服务器地址:"
+                    android:textColor="@android:color/black"
+                    android:textSize="15.0sp" />
+
+                <EditText
+                    android:id="@id/url_setting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/preference_single_item"
+                    android:hint="@string/url_hint"
+                    android:inputType="textUri" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/login_setting"
+                    android:layout_marginLeft="18.0dip"
+                    android:text="服务器端口:"
+                    android:textColor="@android:color/black"
+                    android:textSize="15.0sp" />
+
+                <EditText
+                    android:id="@+id/port_setting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/preference_single_item"
+                    android:hint="例:9991"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/login_setting"
+                    android:layout_marginLeft="18.0dip"
+                    android:text="登录账号:"
+                    android:textColor="@android:color/black"
+                    android:textSize="15.0sp" />
+
+                <EditText
+                    android:id="@id/login_setting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/preference_single_item"
+                    android:hint="@string/login_hint"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <!-- *********************************************************************** -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/login_setting"
+                    android:layout_marginLeft="18.0dip"
+                    android:text="登录密码:"
+                    android:textColor="@android:color/black"
+                    android:textSize="15.0sp" />
+
+                <EditText
+                    android:id="@id/psw_setting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/preference_single_item"
+                    android:hint="@string/loginpsw_hint"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <!-- *********************************************************************** -->
+
+            
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:padding="14.0dip"
+                android:text="请正确设置登录设置，否则将无法正常使用OA短信转发功能"
+                android:textColor="@color/light_gray"
+                android:textSize="16.0dip" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

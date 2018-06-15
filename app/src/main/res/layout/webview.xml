@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/webview_keyboard_ll"
+    style="@style/NavPage"
+    android:background="@null" >
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@id/backBtn"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/title_btn_back"
+            android:onClick="btnmainright"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/system_notifi"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <ProgressBar
+            android:id="@id/progressBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:background="@android:color/transparent" >
+
+        <WebView
+            android:id="@id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@id/web_navigator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/webviewtab_bg"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@id/web_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20.0dip"
+            android:background="@drawable/webviewtab_back_disable" />
+
+        <Button
+            android:id="@id/web_forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20.0dip"
+            android:layout_toRightOf="@id/web_back"
+            android:background="@drawable/webviewtab_forward_disable" />
+
+        <Button
+            android:id="@id/web_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/webview_tab_refresh_btn" />
+    </RelativeLayout>
+
+</LinearLayout>

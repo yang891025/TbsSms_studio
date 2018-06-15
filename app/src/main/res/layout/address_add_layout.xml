@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray" >
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/title_btn_back"
+            android:onClick="btnmainright"
+            android:text="通讯录"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="新联系人"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/addbtn"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:background="@drawable/title_btn_right"
+            android:text="完成"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pic_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_layout"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="5.0dip" >
+
+        <ImageView
+            android:id="@id/imageview"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:src="@drawable/mini_avatar_shadow" />
+
+        <LinearLayout
+            android:id="@+id/info_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/imageview"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/xing"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/preference_single_item"
+                android:hint="姓名"
+                android:paddingBottom="8.0dip"
+                android:paddingTop="8.0dip"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:textSize="15.0dip" />
+
+            <EditText
+                android:id="@+id/ming"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/preference_last_item"
+                android:hint="名"
+                android:paddingBottom="8.0dip"
+                android:paddingTop="8.0dip"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:textSize="15.0dip" 
+                android:visibility="gone"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@id/phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pic_layout"
+        android:layout_marginLeft="30.0dip"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/preference_single_item"
+        android:hint="电话"
+        android:paddingBottom="8.0dip"
+        android:paddingTop="8.0dip"
+        android:singleLine="true"
+        android:textColor="#000"
+        android:inputType="number"
+        android:textSize="15.0dip" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phone"
+        android:layout_marginLeft="30.0dip"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/preference_single_item"
+        android:hint="电子邮件"
+        android:inputType="textEmailAddress"
+        android:paddingBottom="8.0dip"
+        android:paddingTop="8.0dip"
+        android:singleLine="true"
+        android:textColor="#000"
+        android:textSize="15.0dip" />
+
+</RelativeLayout>

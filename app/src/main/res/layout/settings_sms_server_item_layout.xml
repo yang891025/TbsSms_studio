@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbarStyle="outsideOverlay" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/login_setting"
+                    android:layout_marginLeft="18.0dip"
+                    android:text="node标签内容:"
+                    android:textColor="@android:color/black"
+                    android:textSize="15.0sp" />
+
+                <EditText
+                    android:id="@id/email_setting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/preference_single_item"
+                    android:hint="例:ImsServer"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/login_setting"
+                    android:layout_marginLeft="18.0dip"
+                    android:text="服务器ip:"
+                    android:textColor="@android:color/black"
+                    android:textSize="15.0sp" />
+
+                <EditText
+                    android:id="@id/psw_setting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/preference_single_item"
+                    android:hint="例:e.tbs.com.cn"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <!-- *********************************************************************** -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:paddingBottom="14dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/login_setting"
+                    android:layout_marginLeft="18.0dip"
+                    android:text="服务器端口:"
+                    android:textColor="@android:color/black"
+                    android:textSize="15.0sp" />
+
+                <EditText
+                    android:id="@id/smtp_setting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/preference_single_item"
+                    android:hint="例:9991"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <!-- <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15.0dip"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:layout_above="@id/login_setting"
+                android:textColor="@color/address_detail_gray"
+                android:text="请保证设置的内容一一对应，例：node标签内容第一个值与服务器ip第一个值和服务器端口第一个值对应,如果设置错误将影响服务使用"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:textSize="15.0sp" /> -->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

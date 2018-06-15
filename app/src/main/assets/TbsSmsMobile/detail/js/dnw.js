@@ -1,0 +1,3 @@
+function alertMenu() {
+	alert("ÄãºÃ");
+}

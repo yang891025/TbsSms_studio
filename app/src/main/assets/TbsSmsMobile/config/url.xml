@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 请不要改变标签顺序 -->
+<locations>
+    <!-- 写入sqlite数据库文件路径,此处请不要修改 -->
+    <location id="1">
+        <url>/data/data/com.tbs.tbssms/databases/</url>
+    </location>
+    <!-- 写入sqlite数据库文件名 -->
+    <location id="2">
+        <url>TbsSms.db</url>
+    </location>
+    <!-- 下载的更新的链接-->
+    <location id="3">
+        <url>http://168.160.111.214:1168/update/data.txt</url>
+    </location>
+    <!-- 下载的更新xml的路径 -->
+    <location id="4">
+        <url>/mnt/sdcard/TbsSmsUpdate/</url>
+    </location>
+    <!-- 下载的更新xml的名称 -->
+    <location id="5">
+        <url>data.txt</url>
+    </location>
+    <!-- 单挑更新比较的名字 -->
+    <location id="6">
+        <url>.txt</url>
+    </location>
+    <!--字段与字段值间的分隔符 -->
+    <location id="7">
+        <url>=:</url>
+    </location>
+    <!-- 记录之间的分割符  -->
+    <location id="8">
+        <url>/\r/\n</url>
+    </location>
+    <!-- 记录分隔符需要重复的次数,如值为3, 分隔符是"\n",表示连续3次换行表示记录结束 -->
+    <location id="9">
+        <url>3</url>
+    </location>
+    <!-- 文本的默认换行符,如Windows下是"\r\n", Linux下是"\n" -->
+    <location id="10">
+        <url>/\r/\n</url>
+    </location>
+</locations>

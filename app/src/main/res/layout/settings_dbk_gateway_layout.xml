@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/title_bar"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@id/backBtn"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/title_btn_back"
+            android:onClick="btnmainright"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="手机短信服务"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/addbtn"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:background="@drawable/title_btn_right"
+            android:text="保存"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarStyle="outsideOverlay" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/tool_button"
+            android:orientation="vertical"
+            android:scrollbars="none" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14.0dip"
+                android:background="@drawable/preference_single_item"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/auto_start_server"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@id/toggleButton"
+                    style="@style/mycheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/login_setting"
+                    android:layout_marginLeft="18.0dip"
+                    android:text="服务器地址:"
+                    android:textColor="@android:color/black"
+                    android:textSize="15.0sp" />
+
+                <EditText
+                    android:id="@+id/sms_gateway_http_url"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/preference_single_item"
+                    android:hint="例:168.160.111.1"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <!-- *********************************************************************** -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/login_setting"
+                    android:layout_marginLeft="18.0dip"
+                    android:text="服务器端口:"
+                    android:textColor="@android:color/black"
+                    android:textSize="15.0sp" />
+
+                <EditText
+                    android:id="@+id/sms_gateway_http_port"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/preference_single_item"
+                    android:hint="例:9991"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ims_setting"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_gray"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18.0dip"
+                        android:text="短信注册网关:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15.0sp" />
+
+                    <EditText
+                        android:id="@+id/sms_gateway_regist"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/preference_single_item"
+                        android:hint="例 zc："
+                        android:inputType="text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/login_setting"
+                        android:layout_marginLeft="18.0dip"
+                        android:text="查询账号密码："
+                        android:textColor="@android:color/black"
+                        android:textSize="15.0sp" />
+
+                    <EditText
+                        android:id="@+id/sms_gateway_detail_userinfo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/preference_single_item"
+                        android:hint="例 cxzhmm："
+                        android:inputType="text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/login_setting"
+                        android:layout_marginLeft="18.0dip"
+                        android:text="修改密码网关："
+                        android:textColor="@android:color/black"
+                        android:textSize="15.0sp" />
+
+                    <EditText
+                        android:id="@+id/sms_gateway_update_userinfo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/preference_single_item"
+                        android:hint="例 xgmm："
+                        android:inputType="text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="14dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/login_setting"
+                        android:layout_marginLeft="18.0dip"
+                        android:text="大百科检索网关："
+                        android:textColor="@android:color/black"
+                        android:textSize="15.0sp" />
+
+                    <EditText
+                        android:id="@+id/sms_gateway_search_dbk"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/preference_single_item"
+                        android:hint="例 dbkjs："
+                        android:inputType="text" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/news_setting"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_gray"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/login_setting"
+                        android:layout_marginLeft="18.0dip"
+                        android:text="查询钱余额网关："
+                        android:textColor="@android:color/black"
+                        android:textSize="15.0sp" />
+
+                    <EditText
+                        android:id="@+id/sms_gateway_detail_qb"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/preference_single_item"
+                        android:hint="例 qbye："
+                        android:inputType="text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/login_setting"
+                        android:layout_marginLeft="18.0dip"
+                        android:text="钱包充值网关："
+                        android:textColor="@android:color/black"
+                        android:textSize="15.0sp" />
+
+                    <EditText
+                        android:id="@+id/sms_gateway_input_qb"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/preference_single_item"
+                        android:hint="例 qbcz："
+                        android:inputType="text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="14dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/login_setting"
+                        android:layout_marginLeft="18.0dip"
+                        android:text="查询钱包账单网关："
+                        android:textColor="@android:color/black"
+                        android:textSize="15.0sp" />
+
+                    <EditText
+                        android:id="@+id/sms_gateway_detail_qb_zd"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/preference_single_item"
+                        android:hint="例 cxqbzd："
+                        android:inputType="text" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

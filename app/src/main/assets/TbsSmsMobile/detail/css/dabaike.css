@@ -1,0 +1,360 @@
+@CHARSET "UTF-8";
+body, html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-size:16px;
+}
+a {
+	font-size: 16px;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.mainTab {
+	width: 100%;
+	height: 100%;
+}
+.contTab {
+	width: 100%;
+}
+.contTab td {
+	line-height: 29px;
+}
+.contTab td span {
+	font-weight: bold;
+	color: #036;
+}
+.contTab td p {
+	margin: 0;
+	text-indent: 2em;
+}
+.xgtmTd a {
+	display: block;
+	width: 240px;
+	_width:280px;
+	margin:6px 6px;
+	height: 40px;
+	float: left;
+	padding-left: 40px;
+	background:url(file:///android_asset/right_bg.gif) no-repeat left;
+}
+
+
+<!--首页历史今天-->
+.todaycss {                      
+font-size:36px; 
+font-weight:bold;
+font-famliy:SimHei;
+overflow-x : hidden ; 
+color: #FF0000;
+}
+
+<!--body整体的样式-->
+.bodybg {                                 
+  background: url(../image/index_bg.jpg) repeat-x;
+	margin-top:0px;
+	margin-left:0px;
+	background-color:#fcfdfe;	
+}
+
+
+
+.font{                                    
+  font-size:36px;
+	color:#ffffff;
+	font-weight:bold;
+}
+.fontsize{                                    
+  font-size:36px;
+	color:#000000;
+	font-weight:bold;
+}
+<!--拼音值 -->
+.STYLE1 {
+	font-family: Times New Roman;
+	font-size: 36px;
+}
+<!--中文名称值 -->
+.STYLE2 {
+	font-size: 36px;
+	font-family: "黑体"
+}
+<!-- 作者值、所属值、卷名值-->
+.font21{
+    font-size:36px;
+	line-height:25px;
+}
+<!--字段名称 -->
+.font22{
+    font-size:36px;
+	color:#blue;
+	line-height:25px;
+	font-weight:bold;
+	font-family: "楷体_GB2312"
+}
+<!--正文值-->
+.font4{
+	line-height:1;
+    font-size:36px;
+	color:#000000;
+	font-family: "宋体-方正超大字符集"
+}
+.font41{
+	line-height:2;
+    font-size:36px;
+	color:#000000;
+	font-family: "ZYSongDbk"
+}
+<!--外文名称 -->
+.STYLE4 {
+	font-size: 36px;
+	font-family: Times New Roman;
+}
+
+.STYLE21 {
+	font-family: "黑体"
+}
+.STYLE22 {
+	font-family: "楷体_GB2312"
+}
+.STYLE44 {font-size: 36px}
+.STYLE6 {
+	font-size: 36px;
+	font-family: 宋体;
+}
+.STYLE11 {font-size: 36px}
+.STYLE13 {
+	font-size: 36px;
+	font-family: 宋体;
+}
+.STYLE113 {
+	font-size: 36px;
+	font-family: 黑体;
+}
+.fieldfont{
+color:#999999;
+}
+.font2{
+    font-size:36px;
+	color:#999999;
+	line-height:25px;
+}
+
+.fon3{
+    font-size:36px;
+}
+.font3{
+    font-size:36px;
+	color:red;
+	line-height:25px;
+}
+
+.font5{
+    font-size:36px;
+	color:#000000;
+	
+}
+.font6{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:36px;
+
+	color:#0218b8;
+	line-height:25px;
+}
+.font7{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:36px;
+    font-weight:bold;
+	color:#000000;
+	line-height:25px;
+}
+.font8{
+    font-size:36px;
+	color:red;
+	
+}
+
+.dian{
+    font-size:36px;
+	vertical-align:middle;
+	font-family:Arial, Helvetica, sans-serif;
+    
+}
+
+A:link {font-size: 16px; color:#000000;}                    <!--连接的样式-->
+A:active {font-size: 16px; color:#FF0000;}
+A:visited {font-size: 16px; color:#000000;}
+A:hover {font-size: 16px; color:#FF0000;}
+
+
+A.tntt:link {font-size: 16px; color:#ffffff;}                    <!--连接的样式-->
+A.tntt:active {font-size: 16px; color:#FF0000;}
+A.tntt:visited {font-size: 16px; color:#ffffff;}
+A.tntt:hover {font-size: 16px; color:#FF0000;}
+
+<!--主要超链接 -->
+A.ss:link {font-size: 16px; color:blue;}
+A.ss:active {font-size: 16px; color:#FF0000;}
+A.ss:visited {font-size: 16px; color:#800080;}
+A.ss:hover {font-size: 16px; color:#FF0000;}
+
+A.si:link {font-size: 16px; color:blue;}
+A.si:active {font-size: 16px; color:#FF0000;}
+A.si:visited {font-size: 16px; color:#800080;}
+A.si:hover {font-size: 16px; color:#FF0000;}
+
+A.ss11:link {font-size: 16px; color:blue;}
+A.ss11:active {font-size: 16px; color:#FF0000;}
+A.ss11:visited {font-size: 16px; color:#800080;}
+A.ss11:hover {font-size: 16px; color:#FF0000;}
+
+A.picc:link {font-size: 16px; color:blue;}
+A.picc:active {font-size: 16px; color:#FF0000;}
+A.picc:visited {font-size: 16px; color:#800080;}
+A.picc:hover {font-size: 16px; color:#FF0000;}
+
+A.bt:link {font-size: 16px; color:#000000; text-decoration:none;}
+A.bt:active {font-size: 16px; color:#FF0000; text-decoration:none;}
+A.bt:visited {font-size: 16px; color:#000000; text-decoration:none;}
+A.bt:hover {font-size: 16px; color:#FF0000; text-decoration:none;}
+
+A.bt2:link {font-size: 16px; color:#000000; }
+A.bt2:active {font-size: 16px; color:#FF0000; }
+A.bt2:visited {font-size: 16px; color:#000000; }
+A.bt2:hover {font-size: 16px; color:#FF0000; }
+
+
+A.firstbt:link {font-size: 16px; color:#000000; text-decoration:none;}
+A.firstbt:active {font-size: 16px; color:#FF0000; text-decoration:none;}
+A.firstbt:visited {font-size: 16px; color:#000000; text-decoration:none;}
+A.firstbt:hover {font-size: 16px; color:#FF0000; text-decoration:none;}
+
+A.js:link {font-size: 16px; color:#0218b8;}
+A.js:active {font-size: 16px; color:#FF0000;}
+A.js:visited {font-size: 16px; color:#0218b8;}
+A.js:hover {font-size: 16px; color:#FF0000;}
+
+A.lj:link {font-size: 16px; color:blue;text-decoration:none;line-height:25px;}
+A.lj:active {font-size: 16px; color:#FF0000;text-decoration:none;line-height:25px;}
+A.lj:visited {font-size: 16px; color:#800080;text-decoration:none;line-height:25px;}
+A.lj:hover {font-size: 16px; color:#FF0000;text-decoration:none;line-height:25px;}
+
+A.lj2:link {font-size: 16px; color:#0218b8;text-decoration:none;}
+A.lj2:active {font-size: 16px; color:#FF0000;text-decoration:none;}
+A.lj2:visited {font-size: 16px; color:#0218b8;text-decoration:none;}
+A.lj2:hover {font-size: 16px; color:#FF0000;text-decoration:none;}
+
+A.lj3:link {font-size: 16px; color:#0218b8;line-height:24px;}
+A.lj3:active {font-size: 16px; color:#FF0000;line-height:24px;}
+A.lj3:visited {font-size: 16px; color:#0218b8;line-height:24px;}
+A.lj3:hover {font-size: 16px; color:#FF0000;line-height:24px;}
+
+A.lj4:link {font-size: 16px; color:#0218b8;text-decoration:none;font-weight:bold;}
+A.lj4:active {font-size: 16px; color:#FF0000;text-decoration:none;font-weight:bold;}
+A.lj4:visited {font-size: 16px; color:#0218b8;text-decoration:none;font-weight:bold;}
+A.lj4:hover {font-size: 16px; color:#FF0000;text-decoration:none;font-weight:bold;}
+
+
+A.sj:link {font-size: 16px; color:#ffffff;text-decoration:none;font-weight:bold;}
+A.sj:active {font-size: 16px; color:#FF0000;text-decoration:none;font-weight:bold;}
+A.sj:visited {font-size: 16px; color:#ffffff;text-decoration:none;font-weight:bold;}
+A.sj:hover {font-size: 16px; color:#FF0000;text-decoration:none;font-weight:bold;}
+
+A.sj2:link {font-size: 16px; color:#cb0f0f;font-weight:bold;}
+A.sj2:active {font-size: 16px; color:#FF0000;font-weight:bold;}
+A.sj2:visited {font-size: 16px; color:#cb0f0f;font-weight:bold;}
+A.sj2:hover {font-size: 16px; color:#FF0000;font-weight:bold;}
+
+A.pic01:link {font-size: 16px; color:#5f165d; text-decoration:none;}
+A.pic01:active {font-size: 16px; color:#FF0000;text-decoration:none;}
+A.pic01:visited {font-size: 16px; color:#5f165d;text-decoration:none;}
+A.pic01:hover {font-size: 16px; color:#FF0000;text-decoration:none;}
+
+A.js2:link {font-size: 16px; color:#780147;}
+A.js2:active {font-size: 16px; color:#FF0000;}
+A.js2:visited {font-size: 16px; color:#780147;}
+A.js2:hover {font-size: 16px; color:#FF0000;}
+
+A.js3:link {font-size: 16px; color:blue; text-decoration:none;}
+A.js3:active {font-size: 16px; color:#blue; text-decoration:none;}
+A.js3:visited {font-size: 16px; color:#800080; text-decoration:none;}
+A.js3:hover {font-size: 16px; color:#blue; text-decoration:none;}
+
+A.bottom:link {font-size: 16px; color:#000000;}
+A.bottom:active {font-size: 16px; color:#FF0000;}
+A.bottom:visited {font-size: 16px; color:#000000;}
+A.bottom:hover {font-size: 16px; color:#FF0000;}
+
+.input{
+
+     height:20px;
+	 font-size:36px;
+	 padding:4px 0px 0px 0px;
+	 border-color:#000000; 
+	 border-top:1px;
+	 border-bottom:1px;
+	 border-left:1px;
+	 border-right:1px;
+	 background-color:#f9f5f5;
+
+}
+.input2{
+
+     height:19px;
+	 border-color:#000000; 
+	 border-top:1px;
+	 border-bottom:1px;
+	 border-left:1px;
+	 border-right:1px;
+	 background-color:#ffffff;
+
+}
+
+.input3{
+
+     height:19px;
+	 border-color:#000000; 
+	 border-top:1px;
+	 border-bottom:1px;
+	 border-left:1px;
+	 border-right:1px;
+	 background-color:#ffffff;
+
+}
+
+.lefttitle{
+     width:196px;
+	 height:30px;
+    
+
+}
+.lefttitlet
+{
+	 font-size:36px;
+	 font-weight:bold;
+	 color:#000000;
+}
+.leftico{ 
+     width:35px;
+	 height:35px;
+	
+}
+.leftico2{ 
+    
+	 height:20px;
+	
+}
+
+
+.img{
+ filter:progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, color=gray);
+}
+
+
+.bgcolor-01 {  background-color: #A5CCE7; }
+.bgcolor-02 {  background-color: #E6F3FB; }

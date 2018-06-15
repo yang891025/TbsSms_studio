@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray" >
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@id/backBtn"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/title_btn_back"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="详细资料"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pic_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_layout"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="5.0dip" >
+
+        <ImageView
+            android:id="@id/imageview"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:src="@drawable/mini_avatar_shadow" />
+
+        <TextView
+            android:id="@id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:layout_toRightOf="@id/imageview"
+            android:text="任雪涛"
+            android:textColor="@android:color/black"
+            android:textSize="16.0dip" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/info_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pic_layout"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/preference_first_item"
+            android:clickable="true"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="70.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3.0dip"
+                android:paddingBottom="8.0dip"
+                android:paddingTop="8.0dip"
+                android:text="姓名"
+                android:textColor="@color/address_detail_gray" />
+
+            <TextView
+                android:id="@+id/name_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/name_tv"
+                android:paddingBottom="8.0dip"
+                android:paddingTop="8.0dip"
+                android:text="任雪涛"
+                android:textColor="@android:color/black" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/preference_last_item"
+            android:clickable="true"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/phone_tv"
+                android:layout_width="70.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3.0dip"
+                android:paddingBottom="8.0dip"
+                android:paddingTop="8.0dip"
+                android:text="电话"
+                android:textColor="@color/address_detail_gray" />
+
+            <TextView
+                android:id="@+id/phone_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/phone_tv"
+                android:paddingBottom="8.0dip"
+                android:paddingTop="8.0dip"
+                android:text="13488717690"
+                android:textColor="@android:color/black" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@id/sendBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:layout_marginTop="30.0dip"
+        android:background="@drawable/btn_style_green"
+        android:text="发消息"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="@color/bg_gray" android:orientation="vertical">
+    <RelativeLayout android:id="@id/title" android:layout_width="fill_parent" android:layout_height="45dp" android:layout_alignParentTop="true" android:background="@drawable/title_bar" android:gravity="center_vertical" >
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:text="通讯录" android:textColor="#ffffff" android:textSize="20sp" />
+        <Button android:id="@+id/right_btn" android:layout_width="67dp" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginRight="5dp" android:background="@drawable/title_btn_right" android:onClick="addressBtnmMinright" android:text="添加" android:textColor="@color/white" />
+    </RelativeLayout>
+    <FrameLayout android:background="@color/bg_gray" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="@color/bg_gray" android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true">
+            <include layout="@layout/address_search_bar"/>
+            <TextView android:id="@id/textview" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/listview_contact_null" android:gravity="center_horizontal" android:textColor="@android:color/black" android:textSize="15.0sp" android:background="@color/bg_gray" android:paddingTop="20.0dip" android:visibility="gone"/>
+        	<ListView android:id="@id/listview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/title" android:background="@color/bg_gray" android:cacheColorHint="#00000000" android:divider="@null" android:fastScrollEnabled="true"/>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.tbs.tbssms.util.SideBar android:id="@+id/sideBar" android:layout_width="25dip" android:layout_height="match_parent" android:layout_alignParentRight="true" android:layout_gravity="right|center_vertical" android:paddingBottom="3.0dip" android:background="@drawable/scrollbar_bg_drawable" />
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>
+
+
+    

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/exit_layout"
+              android:focusableInTouchMode="true"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="320dip"
+              android:layout_height="wrap_content"
+              android:background="@drawable/confirm_dialog_bg2"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:padding="5dp"
+        android:text="@string/tools_start_forward"
+        android:textColor="#333"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:text="短信码"
+        android:textColor="#333"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/sms_content"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/preference_single_item"
+        android:hint="例 TBS:+四位数字或者纯四位数字"
+        android:inputType="text"
+        android:textColorHint="@color/address_detail_gray"
+        android:textColor="@android:color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:text="短信验证码"
+        android:textColor="#333"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/sms_mark_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/preference_single_item"
+        android:textColor="@android:color/black"
+        android:lines="6"
+        android:focusable="false"
+        android:longClickable="false"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="33dp"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/exitBtn0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_style_green"
+            android:gravity="center"
+            android:onClick="makebutton"
+            android:text="生成"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/copyBtn1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_style_white"
+            android:gravity="center"
+            android:onClick="copybutton"
+            android:text="复制"
+            android:textColor="#333"
+            android:textSize="16sp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/exitBtn1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_style_red"
+            android:gravity="center"
+            android:onClick="exitbutton"
+            android:text="关闭"
+            android:textColor="#333"
+            android:textSize="16sp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</LinearLayout>

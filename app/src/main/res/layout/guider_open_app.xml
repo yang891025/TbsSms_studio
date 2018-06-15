@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/guider_03" />
+
+    <Button
+        android:id="@id/beginBtn"
+        android:layout_width="120.0dip"
+        android:layout_height="40.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70.0dip"
+        android:textColor="@color/white"
+        android:text="@string/guider_open_button"
+        android:background="@drawable/guider_open_botton"/>
+
+</RelativeLayout>
